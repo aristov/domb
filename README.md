@@ -1,6 +1,6 @@
 # domb
 
-[![NPM Version](https://img.shields.io/npm/v/domb.svg?maxAge=3600000)](https://www.npmjs.com/package/domb)
+[![NPM Version](https://img.shields.io/npm/v/domb.svg?maxAge=86400)](https://www.npmjs.com/package/domb)
 
 DOM Builder.
 
