@@ -1,11 +1,13 @@
 # domb
 
 [![NPM Version](https://img.shields.io/npm/v/domb.svg?maxAge=86400)](https://www.npmjs.com/package/domb)
+[![Node.js CI](https://github.com/aristov/domb/actions/workflows/node.js.yml/badge.svg)](https://github.com/aristov/domb/actions/workflows/node.js.yml)
+[![Coverage Status](https://coveralls.io/repos/github/aristov/domb/badge.svg?branch=main)](https://coveralls.io/github/aristov/domb?branch=main)
 
-DOM Builder.
+DomB is a DOM Builder.
 
 This is a simple cross-platform DOM generation library.
-It can be used for creating templates and testing.
+It is a handy tool for creating templates and testing.
 
 ## Installation
 
