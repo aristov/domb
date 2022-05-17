@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "webpack && NODE_ENV=production webpack",
+    "coverage": "nyc --reporter=lcov npm test",
     "test": "nyc ava",
     "watch": "ava --watch"
   },
@@ -28,13 +29,5 @@
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "xwindow": "^0.1.0"
-  },
-  "nyc": {
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "sourceMap": false,
-    "report-dir": "dist/coverage"
   }
 }
