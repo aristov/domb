@@ -7,7 +7,7 @@
     "build": "webpack && NODE_ENV=production webpack",
     "coverage": "nyc --reporter=lcov npm test",
     "publish": "git push && git push --tags",
-    "test": "nyc ava",
+    "test": "ava",
     "watch": "ava --watch"
   },
   "repository": {
@@ -31,6 +31,6 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "xwindow": "^0.1.0"
+    "xwindow": "^0.1.1"
   }
 }
