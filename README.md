@@ -9,6 +9,12 @@ DomB is a DOM Builder.
 This is a simple cross-platform DOM generation library.
 It is a handy tool for creating templates and testing.
 
+## Features
+
+- Convenient JS-compatible syntax
+- Cross-platform, works both in NodeJS and in the browser
+- Small footprint, 1KB after gzip
+
 ## Installation
 
 ```shell

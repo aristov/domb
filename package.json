@@ -2,7 +2,10 @@
   "name": "domb",
   "version": "0.1.1",
   "description": "DOM Builder, a simple cross-platform DOM generation library",
-  "main": "lib/index.js",
+  "main": "lib",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "webpack && NODE_ENV=production webpack",
     "coverage": "nyc --reporter=lcov npm test",
@@ -24,13 +27,13 @@
     "url": "https://github.com/aristov/domb/issues"
   },
   "homepage": "https://github.com/aristov/domb#readme",
+  "dependencies": {
+    "xwindow": "^0.1.1"
+  },
   "devDependencies": {
     "ava": "^4.2.0",
     "nyc": "^15.1.0",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
-  },
-  "dependencies": {
-    "xwindow": "^0.1.1"
   }
 }
