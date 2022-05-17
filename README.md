@@ -1,6 +1,6 @@
 # domb
 
-[![NPM Version](https://img.shields.io/npm/v/domb.svg?maxAge=86400)](https://www.npmjs.com/package/domb)
+[![NPM Version](https://img.shields.io/npm/v/domb.svg)](https://www.npmjs.com/package/domb)
 [![Node.js CI](https://github.com/aristov/domb/actions/workflows/node.js.yml/badge.svg)](https://github.com/aristov/domb/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/aristov/domb/badge.svg?branch=main)](https://coveralls.io/github/aristov/domb?branch=main)
 
@@ -27,6 +27,15 @@ CommonJS
 
 ```js
 const { div } = require('domb')
+```
+
+Browser
+
+```html
+<script src="https://unpkg.com/domb@latest/dist/domb.js"></script>
+<script>
+  const { div } = domb
+</script>
 ```
 
 ## Example
