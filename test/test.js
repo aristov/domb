@@ -1,8 +1,13 @@
+const { Node, XMLSerializer } = require('xwindow')
 const test = require('ava')
 const domb = require('../lib')
+
 const { form, label, input, button } = domb
 const { html, head, body, base, meta, title, link, style, script } = domb
 const { table, caption, thead, tbody, tr, th, td } = domb
+const { fragment, text, div } = domb
+
+const serializer = new XMLSerializer
 
 test('domb', t => {
   const node = domb('div', {
@@ -64,4 +69,20 @@ test('table', t => {
   ])
   t.is(node.outerHTML,
     '<table><caption>Capitals</caption><thead><tr><th>Country</th><th>Capital</th></tr></thead><tbody><tr><td>USA</td><td>Washington</td></tr><tr><td>UK</td><td>London</td></tr><tr><td>Netherlands</td><td>Amsterdam</td></tr></tbody></table>')
+})
+
+test('text', t => {
+  const node = text('Hello DomB!')
+  t.is(node.nodeType, Node.TEXT_NODE)
+  t.is(node.data, 'Hello DomB!')
+  t.is(serializer.serializeToString(node), 'Hello DomB!')
+})
+
+test('fragment', t => {
+  const node = fragment([input({ type : 'checkbox' }), button('Submit')])
+  t.is(node.nodeType, Node.DOCUMENT_FRAGMENT_NODE)
+  t.is(node.children.length, 2)
+  const container = div(node)
+  t.false(node.hasChildNodes())
+  t.is(container.innerHTML, '<input type="checkbox"><button>Submit</button>')
 })
