@@ -4,7 +4,7 @@
 [![Node.js CI](https://github.com/aristov/domb/actions/workflows/node.js.yml/badge.svg)](https://github.com/aristov/domb/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/aristov/domb/badge.svg?branch=main)](https://coveralls.io/github/aristov/domb?branch=main)
 
-DomB is a DOM Builder.
+DomB [domby] is a DOM Builder.
 
 This is a simple cross-platform DOM generation library.
 It is a handy tool for creating templates and testing.
