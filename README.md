@@ -3,6 +3,7 @@
 [![NPM Version](https://img.shields.io/npm/v/domb.svg)](https://www.npmjs.com/package/domb)
 [![Node.js CI](https://github.com/aristov/domb/actions/workflows/node.js.yml/badge.svg)](https://github.com/aristov/domb/actions/workflows/node.js.yml)
 [![Coverage Status](https://coveralls.io/repos/github/aristov/domb/badge.svg?branch=main)](https://coveralls.io/github/aristov/domb?branch=main)
+![NPM](https://img.shields.io/npm/l/domb)
 
 DomB [domby] is a DOM Builder.
 
