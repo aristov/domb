@@ -13,6 +13,7 @@ It is a handy tool for creating templates and testing.
 
 - Convenient JS-compatible syntax
 - Cross-platform, works both in NodeJS and in the browser
+- Support for ES2015 named imports
 - Small footprint, 1KB after gzip
 
 ## Installation
