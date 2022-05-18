@@ -19,7 +19,16 @@
   },
   "keywords": [
     "html",
-    "dom"
+    "dom",
+    "dom builder",
+    "dom assembler",
+    "dom node",
+    "dom element",
+    "element node",
+    "text node",
+    "document fragment",
+    "template",
+    "template engine"
   ],
   "author": "Vyacheslav Aristov",
   "license": "MIT",
