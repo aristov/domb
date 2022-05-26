@@ -4,6 +4,7 @@
   "description": "DOM Builder, a simple cross-platform DOM generation library",
   "main": "lib",
   "files": [
+    "dist",
     "lib"
   ],
   "scripts": {
