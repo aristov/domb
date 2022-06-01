@@ -20,7 +20,8 @@ module.exports = __webpack_require__(1)
 /* 1 */
 /***/ ((module, exports, __webpack_require__) => {
 
-const $ = __webpack_require__(2)
+const { Text } = __webpack_require__(2)
+const $ = __webpack_require__(3)
 
 exports = module.exports = $
 
@@ -136,12 +137,32 @@ exports["var"] = p => $('var', p)
 exports.video = p => $('video', p)
 exports.wbr = p => $('wbr', p)
 
+exports.fragment = c => $('#fragment', c)
+exports.text = s => new Text(s)
+
 
 /***/ }),
 /* 2 */
+/***/ ((module) => {
+
+/**
+ * @module xwindow
+ * @author Vyacheslav Aristov <vv.aristov@gmail.com>
+ */
+if(typeof window === 'undefined') {
+  // Calling via eval() does not allow the module bundler to extract jsdom
+  const { JSDOM } = eval('require("jsdom")')
+  const { window } = new JSDOM
+  module.exports = window
+}
+else module.exports = window
+
+
+/***/ }),
+/* 3 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-const { document } = __webpack_require__(3)
+const { DocumentFragment, document } = __webpack_require__(2)
 
 /**
  * @param {string} name
@@ -149,11 +170,14 @@ const { document } = __webpack_require__(3)
  * @return {HTMLElement}
  */
 function domb(name, props = {}) {
-  const node = document.createElement(name)
+  const node = name === '#fragment'? new DocumentFragment : document.createElement(name)
   if(props.constructor !== Object) {
     props = { children : props }
   }
   node.append(...[props.children].flat(Infinity).filter(Boolean))
+  if(name === '#fragment') {
+    return node
+  }
   let prop, value
   for(prop in props) {
     value = props[prop]
@@ -168,23 +192,6 @@ function domb(name, props = {}) {
 }
 
 module.exports = domb
-
-
-/***/ }),
-/* 3 */
-/***/ ((module) => {
-
-/**
- * @module xwindow
- * @author Vyacheslav Aristov <vv.aristov@gmail.com>
- */
-if(typeof window === 'undefined') {
-  // Calling via eval() does not allow the module bundler to extract jsdom
-  const { JSDOM } = eval('require("jsdom")')
-  const { window } = new JSDOM
-  module.exports = window
-}
-else module.exports = window
 
 
 /***/ })
