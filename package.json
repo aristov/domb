@@ -1,6 +1,6 @@
 {
   "name": "domb",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "DOM Builder, a simple cross-platform DOM generation library",
   "main": "lib",
   "files": [
