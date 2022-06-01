@@ -5,6 +5,7 @@
   "main": "lib",
   "files": [
     "dist",
+    "engine.js",
     "lib"
   ],
   "scripts": {
